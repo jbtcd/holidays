@@ -23,14 +23,16 @@ class Holiday
      *
      * @throws Exception\CountryNotSupportedException
      */
-    public function __construct(string $iso3, ?int $year) {
+    public function __construct(string $iso3, ?int $year = null) {
         $this->country = Configuration::getCountryClass($iso3);
 
         if ($year === null) {
             $year = (int) date('Y');
         }
 
-        $this->country->createList($year);
+        $this->country->setYear($year);
+
+        $this->country->createList();
     }
 
     /**

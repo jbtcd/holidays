@@ -2,12 +2,16 @@
 
 namespace jbtcd\Holidays\Countries;
 
+use jbtcd\Holidays\Exception\DateIsNotInSelectedYearException;
+
 abstract class AbstractCountry implements Country
 {
     /** @var \DateTime[] */
     protected array $holidays;
+    /** @var int */
+    private int $selectedYear;
 
-    abstract public function createList(int $year): void;
+    abstract public function createList(): void;
 
     /**
      * @inheritDoc
@@ -22,10 +26,24 @@ abstract class AbstractCountry implements Country
      */
     public function isHoliday(\DateTime $dateTime): bool
     {
+        if ((int) $dateTime->format('Y') !== $this->selectedYear) {
+            throw new DateIsNotInSelectedYearException();
+        }
+
         if (in_array($dateTime, $this->holidays)) {
             return true;
         }
 
         return false;
+    }
+
+    public function setYear(int $year): void
+    {
+        $this->selectedYear = $year;
+    }
+
+    protected function getYear(): int
+    {
+        return $this->selectedYear;
     }
 }

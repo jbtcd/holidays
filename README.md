@@ -19,7 +19,17 @@ $ composer require jbtcd/holidays
 
 ## Usage
 
-tbd.
+```php
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+
+$holiday = new \jbtcd\Holidays\Holiday('DEU', null);
+
+var_dump($holiday->isHoliday(new \DateTime('01.01.2021')));
+
+var_dump($holiday->getHolidays());
+```
 
 ## Testing
 
