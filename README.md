@@ -25,7 +25,7 @@ tbd.
 
 PHPUnit:
 ``` bash
-./vendor/bin/phpunit --testdox tests
+./vendor/bin/phpunit --testdox tests --coverage-text
 ```
 
 ## License
