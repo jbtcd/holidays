@@ -7,6 +7,9 @@ use PHPUnit\Framework\TestCase;
 
 class ConfigurationTest extends TestCase
 {
+    /**
+     * @covers ::isCountrySupported
+     */
     public function testIfCountryIsAvailable(): void
     {
         $this->assertTrue(
