@@ -1,0 +1,30 @@
+{
+    "name": "jbtcd/holidays",
+    "description": "A simple PHP library to work with all the holidays in the world.",
+    "type": "library",
+    "require": {
+        "php": "^7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Jonah Böther",
+            "email": "mail@jbtcd.me",
+            "homepage": "https://jbtcd.me"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "jbtcd\\Holidays\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "jbtcd\\HolidaysTest\\": "tests/"
+        }
+    }
+}
