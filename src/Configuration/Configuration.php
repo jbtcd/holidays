@@ -2,9 +2,9 @@
 
 namespace jbtcd\Holidays\Configuration;
 
-use jbtcd\Holidays\Countries\AbstractCountry;
-use jbtcd\Holidays\Countries\Austria;
-use jbtcd\Holidays\Countries\Germany;
+use jbtcd\Holidays\Country\AbstractCountry;
+use jbtcd\Holidays\Country\Austria;
+use jbtcd\Holidays\Country\Germany;
 use jbtcd\Holidays\Exception\CountryNotSupportedException;
 
 class Configuration

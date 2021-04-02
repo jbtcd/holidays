@@ -1,8 +1,10 @@
 <?php
 
-namespace jbtcd\Holidays\Helper;
+namespace jbtcd\Holidays\Helper\General;
 
-class FeastOfCorpusChristiHelper
+use jbtcd\Holidays\Helper\HelperInterface;
+
+class FeastOfCorpusChristiHelper implements HelperInterface
 {
     public static function getDate(int $year): \DateTime
     {

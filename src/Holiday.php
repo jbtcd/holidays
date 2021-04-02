@@ -10,7 +10,7 @@
 namespace jbtcd\Holidays;
 
 use jbtcd\Holidays\Configuration\Configuration;
-use jbtcd\Holidays\Countries\AbstractCountry;
+use jbtcd\Holidays\Country\AbstractCountry;
 
 class Holiday
 {

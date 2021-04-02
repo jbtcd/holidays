@@ -2,7 +2,7 @@
 
 namespace jbtcd\HolidaysTest\Helper;
 
-use jbtcd\Holidays\Helper\GoodFridayHelper;
+use jbtcd\Holidays\Helper\General\GoodFridayHelper;
 use PHPUnit\Framework\TestCase;
 
 class GoodFridayHelperTest extends TestCase

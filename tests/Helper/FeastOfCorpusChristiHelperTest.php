@@ -2,7 +2,7 @@
 
 namespace jbtcd\HolidaysTest\Helper;
 
-use jbtcd\Holidays\Helper\FeastOfCorpusChristiHelper;
+use jbtcd\Holidays\Helper\General\FeastOfCorpusChristiHelper;
 use PHPUnit\Framework\TestCase;
 
 class FeastOfCorpusChristiHelperTest extends TestCase

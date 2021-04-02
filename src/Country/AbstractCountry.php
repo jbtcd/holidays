@@ -1,6 +1,6 @@
 <?php
 
-namespace jbtcd\Holidays\Countries;
+namespace jbtcd\Holidays\Country;
 
 use jbtcd\Holidays\Exception\DateIsNotInSelectedYearException;
 

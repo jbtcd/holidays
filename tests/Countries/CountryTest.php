@@ -2,8 +2,8 @@
 
 namespace jbtcd\HolidaysTest\Countries;
 
-use jbtcd\Holidays\Countries\AbstractCountry;
-use jbtcd\Holidays\Countries\Germany;
+use jbtcd\Holidays\Country\AbstractCountry;
+use jbtcd\Holidays\Country\Germany;
 use jbtcd\Holidays\Exception\DateIsNotInSelectedYearException;
 use PHPUnit\Framework\TestCase;
 

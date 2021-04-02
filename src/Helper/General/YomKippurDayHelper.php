@@ -1,8 +1,10 @@
 <?php declare(strict_types = 1);
 
-namespace jbtcd\Holidays\Helper;
+namespace jbtcd\Holidays\Helper\General;
 
-class YomKippurDayHelper
+use jbtcd\Holidays\Helper\HelperInterface;
+
+class YomKippurDayHelper implements HelperInterface
 {
     public static function getDate(int $year): \DateTime
     {

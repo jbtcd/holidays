@@ -3,7 +3,7 @@
 namespace jbtcd\HolidaysTest\Configuration;
 
 use jbtcd\Holidays\Configuration\Configuration;
-use jbtcd\Holidays\Countries\Germany;
+use jbtcd\Holidays\Country\Germany;
 use jbtcd\Holidays\Exception\CountryNotSupportedException;
 use PHPUnit\Framework\TestCase;
 

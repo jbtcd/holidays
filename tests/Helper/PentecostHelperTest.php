@@ -2,13 +2,13 @@
 
 namespace jbtcd\HolidaysTest\Helper;
 
-use jbtcd\Holidays\Helper\PentecostHelper;
+use jbtcd\Holidays\Helper\General\PentecostMondayHelper;
 use PHPUnit\Framework\TestCase;
 
 class PentecostHelperTest extends TestCase
 {
     public function testGetDate(): void
     {
-        $this->assertEquals(new \DateTime('2021-05-24'), PentecostHelper::getDate(2021));
+        $this->assertEquals(new \DateTime('2021-05-24'), PentecostMondayHelper::getDate(2021));
     }
 }

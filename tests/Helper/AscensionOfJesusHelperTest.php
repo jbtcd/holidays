@@ -2,7 +2,7 @@
 
 namespace jbtcd\HolidaysTest\Helper;
 
-use jbtcd\Holidays\Helper\AscensionOfJesusHelper;
+use jbtcd\Holidays\Helper\General\AscensionOfJesusHelper;
 use PHPUnit\Framework\TestCase;
 
 class AscensionOfJesusHelperTest extends TestCase
