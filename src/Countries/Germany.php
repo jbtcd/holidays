@@ -2,6 +2,7 @@
 
 namespace jbtcd\Holidays\Countries;
 
+use jbtcd\Holidays\Helper\EasterMondayHelper;
 use jbtcd\Holidays\Helper\EasterSundayHelper;
 use jbtcd\Holidays\Helper\GoodFridayHelper;
 use jbtcd\Holidays\Helper\PentecostHelper;
@@ -19,6 +20,7 @@ class Germany extends AbstractCountry
             new \DateTime($this->getYear() . '-01-01'),
             GoodFridayHelper::getDate($this->getYear()),
             EasterSundayHelper::getDate($this->getYear()),
+            EasterMondayHelper::getDate($this->getYear()),
             new \DateTime($this->getYear() . '-05-01'),
             PentecostHelper::getDate($this->getYear()),
             new \DateTime($this->getYear() . '-10-03'),

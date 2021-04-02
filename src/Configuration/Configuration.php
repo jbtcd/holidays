@@ -3,6 +3,7 @@
 namespace jbtcd\Holidays\Configuration;
 
 use jbtcd\Holidays\Countries\AbstractCountry;
+use jbtcd\Holidays\Countries\Austria;
 use jbtcd\Holidays\Countries\Germany;
 use jbtcd\Holidays\Exception\CountryNotSupportedException;
 
@@ -11,6 +12,7 @@ class Configuration
     /** @var string[] */
     private static array $countries = [
         Germany::ISO3 => Germany::class,
+        Austria::ISO3 => Austria::class,
     ];
 
     /**
