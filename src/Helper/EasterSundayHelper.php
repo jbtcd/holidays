@@ -4,10 +4,8 @@ namespace jbtcd\Holidays\Helper;
 
 class EasterSundayHelper
 {
-    public static function getDate(): \DateTime
+    public static function getDate(int $year): \DateTime
     {
-        $year = (int) date('Y');
-
         $a = $year % 4;
         $b = $year % 7;
         $c = $year % 19;

@@ -54,11 +54,19 @@ class Holiday
     }
 
     /**
+     * @return int
+     */
+    public function getSelectedYear(): int
+    {
+        return $this->country->getYear();
+    }
+
+    /**
      * @param string $iso3
      *
      * @return bool
      */
-    public function isCountrySupported(string $iso3): bool
+    public static function isCountrySupported(string $iso3): bool
     {
         return Configuration::isCountrySupported($iso3);
     }

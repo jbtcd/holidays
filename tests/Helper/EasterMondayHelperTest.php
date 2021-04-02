@@ -2,16 +2,18 @@
 
 namespace jbtcd\HolidaysTest\Helper;
 
+use jbtcd\Holidays\Helper\EasterMondayHelper;
 use jbtcd\Holidays\Helper\EasterSundayHelper;
 use PHPUnit\Framework\TestCase;
 
-class EasterSundayHelperTest extends TestCase
+class EasterMondayHelperTest extends TestCase
 {
     /**
+     * @covers \jbtcd\Holidays\Helper\EasterMondayHelper::getDate
      * @covers \jbtcd\Holidays\Helper\EasterSundayHelper::getDate
      */
     public function testGetDate(): void
     {
-        $this->assertEquals(new \DateTime('2021-04-04'), EasterSundayHelper::getDate(2021));
+        $this->assertEquals(new \DateTime('2021-04-05'), EasterMondayHelper::getDate(2021));
     }
 }

@@ -42,7 +42,7 @@ abstract class AbstractCountry implements Country
         $this->selectedYear = $year;
     }
 
-    protected function getYear(): int
+    public function getYear(): int
     {
         return $this->selectedYear;
     }

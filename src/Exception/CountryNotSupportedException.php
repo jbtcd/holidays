@@ -2,6 +2,9 @@
 
 namespace jbtcd\Holidays\Exception;
 
+/**
+ * @codeCoverageIgnore
+ */
 class CountryNotSupportedException extends \Exception
 {
 

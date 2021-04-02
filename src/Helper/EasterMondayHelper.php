@@ -2,12 +2,12 @@
 
 namespace jbtcd\Holidays\Helper;
 
-class GoodFridayHelper
+class EasterMondayHelper
 {
     public static function getDate(int $year): \DateTime
     {
         $easterSunday = EasterSundayHelper::getDate($year);
 
-        return $easterSunday->modify('-2 days');
+        return $easterSunday->modify('+1 days');
     }
 }

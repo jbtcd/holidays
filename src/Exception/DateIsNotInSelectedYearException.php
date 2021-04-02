@@ -2,6 +2,9 @@
 
 namespace jbtcd\Holidays\Exception;
 
+/**
+ * @codeCoverageIgnore
+ */
 class DateIsNotInSelectedYearException extends \Exception
 {
 
