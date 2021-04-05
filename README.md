@@ -2,13 +2,12 @@
 
 A simple PHP library to work with all the holidays in the world.
 
-[![@jbtcdDE on Twitter](http://img.shields.io/badge/twitter-%40jbtcdDE-blue.svg?style=flat)](https://twitter.com/jbtcdDE)
-[![Build Status](https://travis-ci.com/jbtcd/holidays.svg?branch=main)](https://travis-ci.com/jbtcd/holidays)
+[![@jbtcdDE on Twitter](http://img.shields.io/badge/twitter-%40jbtcdDE-blue.svg?style=flat-square)](https://twitter.com/jbtcdDE)
+[![Build Status](https://img.shields.io/travis/com/jbtcd/holidays/main?style=flat-square)](https://travis-ci.com/jbtcd/holidays)
 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![packagist](https://img.shields.io/packagist/v/jbtcd/holidays.svg?style=flat-square)](https://packagist.org/packages/jbtcd/holidays)
 [![downloads](https://img.shields.io/packagist/dt/jbtcd/holidays.svg?style=flat-square)](https://packagist.org/packages/jbtcd/holidays)
 [![php version](https://img.shields.io/packagist/php-v/jbtcd/holidays?style=flat-square)](https://packagist.org/packages/jbtcd/holidays)
-
 ## Installation
 
 To install, use composer:
