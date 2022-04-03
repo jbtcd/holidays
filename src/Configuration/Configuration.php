@@ -1,4 +1,13 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types = 1);
+
+/**
+ * (c) Jonah Böther <mail@jbtcd.me>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace jbtcd\Holidays\Configuration;
 
@@ -7,6 +16,11 @@ use jbtcd\Holidays\Country\Austria;
 use jbtcd\Holidays\Country\Germany;
 use jbtcd\Holidays\Exception\CountryNotSupportedException;
 
+/**
+ * Class Configuration
+ *
+ * @author Jonah Böther <mail@jbtcd.me>
+ */
 class Configuration
 {
     /** @var string[] */

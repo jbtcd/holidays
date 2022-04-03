@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types = 1);
 
 /**
  * (c) Jonah Böther <mail@jbtcd.me>
@@ -22,7 +24,8 @@ class Holiday
      *
      * @throws Exception\CountryNotSupportedException
      */
-    public function __construct(string $iso3) {
+    public function __construct(string $iso3)
+    {
         $this->country = Configuration::getCountryClass($iso3);
 
         $this->country->createList();
