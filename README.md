@@ -1,13 +1,17 @@
-# The holiday project
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine/)
+
+# The holiday project 🏖️
 
 A simple PHP library to work with all the holidays in the world.
 
-[![@jbtcdDE on Twitter](http://img.shields.io/badge/twitter-%40jbtcdDE-blue.svg?style=flat-square)](https://twitter.com/jbtcdDE)
-[![Build Status](https://img.shields.io/travis/com/jbtcd/holidays/main?style=flat-square)](https://travis-ci.com/jbtcd/holidays)
+[![GitHub stars](https://img.shields.io/github/stars/jbtcd/holidays.svg)](https://github.com/jbtcd/holidays/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/jbtcd/holidays.svg)](https://github.com/jbtcd/holidays/issues)
+[![Build Status](https://travis-ci.com/jbtcd/holidays.svg?branch=main)](https://travis-ci.com/jbtcd/fitbit-sdk-php)
 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
-[![packagist](https://img.shields.io/packagist/v/jbtcd/holidays.svg?style=flat-square)](https://packagist.org/packages/jbtcd/holidays)
-[![downloads](https://img.shields.io/packagist/dt/jbtcd/holidays.svg?style=flat-square)](https://packagist.org/packages/jbtcd/holidays)
-[![php version](https://img.shields.io/packagist/php-v/jbtcd/holidays?style=flat-square)](https://packagist.org/packages/jbtcd/holidays)
+[![packagist](https://img.shields.io/packagist/v/jbtcd/holidays.svg?style=flat-square)](https://packagist.org/packages/jbtcd/fitbit)
+[![downloads](https://img.shields.io/packagist/dt/jbtcd/holidays.svg?style=flat-square)](https://packagist.org/packages/jbtcd/fitbit)
+[![php version](https://img.shields.io/packagist/php-v/jbtcd/holidays?style=flat-square)](https://packagist.org/packages/jbtcd/fitbit)
+
 ## Installation
 
 To install, use composer:
@@ -23,7 +27,7 @@ $ composer require jbtcd/holidays
 
 require __DIR__ . '/vendor/autoload.php';
 
-$holiday = new \jbtcd\Holidays\Holiday('DEU', null);
+$holiday = new \jbtcd\Holidays\Holiday('DEU');
 
 var_dump($holiday->isHoliday(new \DateTime('01.01.2021')));
 

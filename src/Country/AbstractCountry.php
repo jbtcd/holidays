@@ -11,6 +11,11 @@ abstract class AbstractCountry implements Country
     /** @var int */
     private int $selectedYear;
 
+    protected function getYear(): int
+    {
+        return (new \DateTime())->format('Y');
+    }
+
     abstract public function createList(): void;
 
     /**
@@ -26,24 +31,10 @@ abstract class AbstractCountry implements Country
      */
     public function isHoliday(\DateTime $dateTime): bool
     {
-        if ((int) $dateTime->format('Y') !== $this->selectedYear) {
-            throw new DateIsNotInSelectedYearException();
-        }
-
         if (in_array($dateTime, $this->holidays)) {
             return true;
         }
 
         return false;
-    }
-
-    public function setYear(int $year): void
-    {
-        $this->selectedYear = $year;
-    }
-
-    public function getYear(): int
-    {
-        return $this->selectedYear;
     }
 }

@@ -19,18 +19,11 @@ class Holiday
 
     /**
      * @param string $iso3
-     * @param int|null $year
      *
      * @throws Exception\CountryNotSupportedException
      */
-    public function __construct(string $iso3, ?int $year = null) {
+    public function __construct(string $iso3) {
         $this->country = Configuration::getCountryClass($iso3);
-
-        if ($year === null) {
-            $year = (int) date('Y');
-        }
-
-        $this->country->setYear($year);
 
         $this->country->createList();
     }
@@ -54,14 +47,6 @@ class Holiday
     }
 
     /**
-     * @return int
-     */
-    public function getSelectedYear(): int
-    {
-        return $this->country->getYear();
-    }
-
-    /**
      * @param string $iso3
      *
      * @return bool
@@ -69,5 +54,10 @@ class Holiday
     public static function isCountrySupported(string $iso3): bool
     {
         return Configuration::isCountrySupported($iso3);
+    }
+
+    public static function getSupportedCountries(): array
+    {
+        return Configuration::$countries;
     }
 }

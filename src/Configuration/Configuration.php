@@ -10,7 +10,7 @@ use jbtcd\Holidays\Exception\CountryNotSupportedException;
 class Configuration
 {
     /** @var string[] */
-    private static array $countries = [
+    public static array $countries = [
         Germany::ISO3 => Germany::class,
         Austria::ISO3 => Austria::class,
     ];
