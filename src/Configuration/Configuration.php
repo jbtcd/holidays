@@ -34,9 +34,9 @@ class Configuration
      *
      * @throws CountryNotSupportedException
      */
-    public static function getCountryClass(string $iso3): AbstractCountry
+    public function getCountryClass(string $iso3): AbstractCountry
     {
-        if (!self::isCountrySupported($iso3)) {
+        if (!$this->isCountrySupported($iso3)) {
             throw new CountryNotSupportedException();
         }
 
@@ -48,7 +48,7 @@ class Configuration
      *
      * @return bool
      */
-    public static function isCountrySupported(string $iso3): bool
+    public function isCountrySupported(string $iso3): bool
     {
         if (key_exists($iso3, self::$countries)) {
             return true;
