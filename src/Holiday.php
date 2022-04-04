@@ -11,6 +11,8 @@ declare(strict_types = 1);
 
 namespace jbtcd\Holidays;
 
+use DatePeriod;
+use DateTime;
 use jbtcd\Holidays\Configuration\Configuration;
 use jbtcd\Holidays\Country\AbstractCountry;
 
@@ -37,21 +39,21 @@ class Holiday
     }
 
     /**
-     * @param \DateTime $dateTime
+     * @param DateTime $dateTime
      *
      * @return bool
      */
-    public function isHoliday(\DateTime $dateTime): bool
+    public function isHoliday(DateTime $dateTime): bool
     {
         return $this->country->isHoliday($dateTime);
     }
 
     /**
-     * @param \DatePeriod $dateRange
+     * @param DatePeriod $dateRange
      *
      * @return array
      */
-    public function getHolidays(\DatePeriod $dateRange): array
+    public function getHolidays(DatePeriod $dateRange): array
     {
         $holidays = [];
 

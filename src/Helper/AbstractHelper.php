@@ -11,6 +11,8 @@ declare(strict_types = 1);
 
 namespace jbtcd\Holidays\Helper;
 
+use DateTime;
+
 /**
  * Class AbstractHelper
  *
@@ -19,18 +21,18 @@ namespace jbtcd\Holidays\Helper;
 abstract class AbstractHelper implements HelperInterface
 {
     /**
-     * @param \DateTime $dateTime
+     * @param DateTime $dateTime
      *
-     * @return \DateTime
+     * @return DateTime
      */
-    abstract protected function getDateOfHoliday(\DateTime $dateTime): \DateTime;
+    abstract protected function getDateOfHoliday(DateTime $dateTime): DateTime;
 
     /**
-     * @param \DateTime $dateTime
+     * @param DateTime $dateTime
      *
      * @return bool
      */
-    public function isMatch(\DateTime $dateTime): bool
+    public function isMatch(DateTime $dateTime): bool
     {
         if ($this->getDateOfHoliday($dateTime) === $dateTime) {
             return true;

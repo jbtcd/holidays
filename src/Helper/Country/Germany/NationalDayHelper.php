@@ -11,6 +11,7 @@ declare(strict_types = 1);
 
 namespace jbtcd\Holidays\Helper\Country\Germany;
 
+use DateTime;
 use jbtcd\Holidays\Helper\AbstractHelper;
 
 /**
@@ -21,17 +22,17 @@ use jbtcd\Holidays\Helper\AbstractHelper;
 class NationalDayHelper extends AbstractHelper
 {
     /**
-     * @param \DateTime $dateTime
+     * @param DateTime $dateTime
      *
-     * @return \DateTime
+     * @return DateTime
      *
      * @throws \Exception
      *
      */
-    protected function getDateOfHoliday(\DateTime $dateTime): \DateTime
+    protected function getDateOfHoliday(DateTime $dateTime): DateTime
     {
         $year = $dateTime->format('Y');
 
-        return new \DateTime($year . '-10-03');
+        return new DateTime($year . '-10-03');
     }
 }

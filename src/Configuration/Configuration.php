@@ -13,7 +13,6 @@ namespace jbtcd\Holidays\Configuration;
 
 use jbtcd\Holidays\Country\AbstractCountry;
 use jbtcd\Holidays\Country\Germany;
-use jbtcd\Holidays\Exception\CountryNotSupportedException;
 
 /**
  * Class Configuration
@@ -31,15 +30,9 @@ class Configuration
      * @param string $iso3
      *
      * @return AbstractCountry
-     *
-     * @throws CountryNotSupportedException
      */
-    public function getCountryClass(string $iso3): AbstractCountry
+    public static function getCountryClass(string $iso3): AbstractCountry
     {
-        if (!$this->isCountrySupported($iso3)) {
-            throw new CountryNotSupportedException();
-        }
-
         return new self::$countries[$iso3];
     }
 

@@ -11,6 +11,8 @@ declare(strict_types = 1);
 
 namespace jbtcd\Holidays\Helper;
 
+use DateTime;
+
 /**
  * Interface HelperInterface
  *
@@ -19,9 +21,9 @@ namespace jbtcd\Holidays\Helper;
 interface HelperInterface
 {
     /**
-     * @param \DateTime $dateTime
+     * @param DateTime $dateTime
      *
      * @return bool
      */
-    public function isMatch(\DateTime $dateTime): bool;
+    public function isMatch(DateTime $dateTime): bool;
 }

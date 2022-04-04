@@ -11,6 +11,8 @@ declare(strict_types = 1);
 
 namespace jbtcd\Holidays\Country;
 
+use DateTime;
+
 /**
  * Interface Country
  *
@@ -20,9 +22,9 @@ interface Country
 {
 
     /**
-     * @param \DateTime $dateTime
+     * @param DateTime $dateTime
      *
      * @return bool
      */
-    public function isHoliday(\DateTime $dateTime): bool;
+    public function isHoliday(DateTime $dateTime): bool;
 }

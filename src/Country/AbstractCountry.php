@@ -11,6 +11,7 @@ declare(strict_types = 1);
 
 namespace jbtcd\Holidays\Country;
 
+use DateTime;
 use jbtcd\Holidays\Helper\HelperInterface;
 
 /**
@@ -22,15 +23,13 @@ abstract class AbstractCountry implements Country
 {
     /** @var HelperInterface[] $helper */
     protected array $helper;
-    /** @var int */
-    private int $selectedYear;
 
     abstract public function registerHelper(): void;
 
     /**
      * @inheritDoc
      */
-    public function isHoliday(\DateTime $dateTime): bool
+    public function isHoliday(DateTime $dateTime): bool
     {
         foreach ($this->helper as $helper) {
             if ($helper->isMatch($dateTime)) {
