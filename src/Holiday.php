@@ -14,6 +14,11 @@ namespace jbtcd\Holidays;
 use jbtcd\Holidays\Configuration\Configuration;
 use jbtcd\Holidays\Country\AbstractCountry;
 
+/**
+ * Class Holiday
+ *
+ * @author Jonah Böther <mail@jbtcd.me>
+ */
 class Holiday
 {
     /** @var AbstractCountry */
@@ -28,15 +33,7 @@ class Holiday
     {
         $this->country = Configuration::getCountryClass($iso3);
 
-        $this->country->createList();
-    }
-
-    /**
-     * @return \DateTime[]
-     */
-    public function getHolidays(): array
-    {
-        return $this->country->getHolidays();
+        $this->country->registerHelper();
     }
 
     /**
@@ -47,6 +44,24 @@ class Holiday
     public function isHoliday(\DateTime $dateTime): bool
     {
         return $this->country->isHoliday($dateTime);
+    }
+
+    /**
+     * @param \DatePeriod $dateRange
+     *
+     * @return array
+     */
+    public function getHolidays(\DatePeriod $dateRange): array
+    {
+        $holidays = [];
+
+        foreach ($dateRange as $date) {
+            if ($this->isHoliday($date)) {
+                $holidays[] = $date;
+            }
+        }
+
+        return $holidays;
     }
 
     /**

@@ -12,7 +12,6 @@ declare(strict_types = 1);
 namespace jbtcd\Holidays\Configuration;
 
 use jbtcd\Holidays\Country\AbstractCountry;
-use jbtcd\Holidays\Country\Austria;
 use jbtcd\Holidays\Country\Germany;
 use jbtcd\Holidays\Exception\CountryNotSupportedException;
 
@@ -26,7 +25,6 @@ class Configuration
     /** @var string[] */
     public static array $countries = [
         Germany::ISO3 => Germany::class,
-        Austria::ISO3 => Austria::class,
     ];
 
     /**

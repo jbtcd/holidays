@@ -1,36 +1,31 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types = 1);
+
+/**
+ * (c) Jonah Böther <mail@jbtcd.me>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace jbtcd\Holidays\Country;
 
 use jbtcd\Holidays\Helper\Country\Germany\NationalDayHelper;
-use jbtcd\Holidays\Helper\General\SecondChristmasDayHelper;
-use jbtcd\Holidays\Helper\General\FirstChristmasDayHelper;
-use jbtcd\Holidays\Helper\General\EasterMondayHelper;
-use jbtcd\Holidays\Helper\General\FeastOfCorpusChristiHelper;
-use jbtcd\Holidays\Helper\General\GoodFridayHelper;
-use jbtcd\Holidays\Helper\General\LabourDayHelper;
-use jbtcd\Holidays\Helper\General\NewYearHelper;
-use jbtcd\Holidays\Helper\General\PentecostMondayHelper;
 
 /**
- * @codeCoverageIgnore
+ * Class Germany
+ *
+ * @author Jonah Böther <mail@jbtcd.me>
  */
 class Germany extends AbstractCountry
 {
     public const ISO3 = 'DEU';
 
-    public function createList(): void
+    public function registerHelper(): void
     {
-        $this->holidays = [
-            NewYearHelper::getDate($this->getYear()),
-            GoodFridayHelper::getDate($this->getYear()),
-            EasterMondayHelper::getDate($this->getYear()),
-            LabourDayHelper::getDate($this->getYear()),
-            FeastOfCorpusChristiHelper::getDate($this->getYear()),
-            PentecostMondayHelper::getDate($this->getYear()),
-            NationalDayHelper::getDate($this->getYear()),
-            FirstChristmasDayHelper::getDate($this->getYear()),
-            SecondChristmasDayHelper::getDate($this->getYear()),
+        $this->helper = [
+            new NationalDayHelper(),
         ];
     }
 }

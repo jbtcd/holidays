@@ -6,7 +6,7 @@ A simple PHP library to work with all the holidays in the world.
 
 [![GitHub stars](https://img.shields.io/github/stars/jbtcd/holidays.svg)](https://github.com/jbtcd/holidays/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/jbtcd/holidays.svg)](https://github.com/jbtcd/holidays/issues)
-[![Build Status](https://travis-ci.com/jbtcd/holidays.svg?branch=main)](https://travis-ci.com/jbtcd/fitbit-sdk-php)
+[![Build Status](https://travis-ci.com/jbtcd/holidays.svg?branch=main)](https://travis-ci.com/jbtcd/holidays)
 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![packagist](https://img.shields.io/packagist/v/jbtcd/holidays.svg?style=flat-square)](https://packagist.org/packages/jbtcd/fitbit)
 [![downloads](https://img.shields.io/packagist/dt/jbtcd/holidays.svg?style=flat-square)](https://packagist.org/packages/jbtcd/fitbit)
