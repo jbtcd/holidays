@@ -12,7 +12,7 @@ declare(strict_types = 1);
 namespace jbtcd\Holidays\Country;
 
 use DateTime;
-use jbtcd\Holidays\Helper\HelperInterface;
+use jbtcd\Holidays\Holidays\HolidayInterface;
 
 /**
  * Class AbstractCountry
@@ -21,9 +21,12 @@ use jbtcd\Holidays\Helper\HelperInterface;
  */
 abstract class AbstractCountry implements Country
 {
-    /** @var HelperInterface[] $helper */
+    /** @var HolidayInterface[] $helper */
     protected array $helper;
 
+    /**
+     * In this function all countries has to register the Helper to get the dates of holidays
+     */
     abstract public function registerHelper(): void;
 
     /**

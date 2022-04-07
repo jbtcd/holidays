@@ -22,7 +22,7 @@ use jbtcd\Holidays\Country\Germany;
 class Configuration
 {
     /** @var string[] */
-    public static array $countries = [
+    public array $countries = [
         Germany::ISO3 => Germany::class,
     ];
 
@@ -31,9 +31,9 @@ class Configuration
      *
      * @return AbstractCountry
      */
-    public static function getCountryClass(string $iso3): AbstractCountry
+    public function getCountryClass(string $iso3): AbstractCountry
     {
-        return new self::$countries[$iso3];
+        return new $this->countries[$iso3];
     }
 
     /**
@@ -43,7 +43,7 @@ class Configuration
      */
     public function isCountrySupported(string $iso3): bool
     {
-        if (key_exists($iso3, self::$countries)) {
+        if (key_exists($iso3, $this->countries)) {
             return true;
         }
 

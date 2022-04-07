@@ -28,14 +28,14 @@ class Holiday
 
     /**
      * @param string $iso3
-     *
-     * @throws Exception\CountryNotSupportedException
      */
-    public function __construct(string $iso3)
+    public function __construct(string $iso3, ?string $region = null)
     {
-        $this->country = Configuration::getCountryClass($iso3);
+        $config = new Configuration();
 
-        $this->country->registerHelper();
+        $this->country = $config->getCountryClass($iso3);
+
+        $this->country->registerHelper($region);
     }
 
     /**

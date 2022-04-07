@@ -9,17 +9,16 @@ declare(strict_types = 1);
  * file that was distributed with this source code.
  */
 
-namespace jbtcd\Holidays\Helper\Country\Germany;
+namespace jbtcd\Holidays\Holidays;
 
 use DateTime;
-use jbtcd\Holidays\Helper\AbstractHelper;
 
 /**
- * Class NationalDayHelper
+ * Class GoodFriday
  *
  * @author Jonah Böther <mail@jbtcd.me>
  */
-class NationalDayHelper extends AbstractHelper
+class GoodFriday extends AbstractHoliday
 {
     /**
      * @param DateTime $dateTime
@@ -29,10 +28,11 @@ class NationalDayHelper extends AbstractHelper
      * @throws \Exception
      *
      */
-    protected function getDateOfHoliday(DateTime $dateTime): DateTime
+    public function getDateOfHoliday(DateTime $dateTime): DateTime
     {
-        $year = $dateTime->format('Y');
+        $easterSundayHelper = new EasterSunday();
+        $easterSundayDate = $easterSundayHelper->getDateOfHoliday($dateTime);
 
-        return new DateTime($year . '-10-03');
+        return $easterSundayDate->modify('-2 days');
     }
 }

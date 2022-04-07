@@ -9,21 +9,29 @@ declare(strict_types = 1);
  * file that was distributed with this source code.
  */
 
-namespace jbtcd\Holidays\Helper;
+namespace jbtcd\Holidays\Holidays;
 
 use DateTime;
 
 /**
- * Interface HelperInterface
+ * Class NewYearsDay
  *
  * @author Jonah Böther <mail@jbtcd.me>
  */
-interface HelperInterface
+class NewYearsDay extends AbstractHoliday
 {
     /**
      * @param DateTime $dateTime
      *
-     * @return bool
+     * @return DateTime
+     *
+     * @throws \Exception
+     *
      */
-    public function isMatch(DateTime $dateTime): bool;
+    public function getDateOfHoliday(DateTime $dateTime): DateTime
+    {
+        $year = $dateTime->format('Y');
+
+        return new DateTime($year . '-01-01');
+    }
 }

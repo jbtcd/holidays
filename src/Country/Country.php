@@ -12,6 +12,7 @@ declare(strict_types = 1);
 namespace jbtcd\Holidays\Country;
 
 use DateTime;
+use jbtcd\Holidays\Holidays\HolidayInterface;
 
 /**
  * Interface Country
@@ -24,7 +25,16 @@ interface Country
     /**
      * @param DateTime $dateTime
      *
+     * Check if given Date is holiday
+     *
      * @return bool
      */
     public function isHoliday(DateTime $dateTime): bool;
+
+    /**
+     * @param HolidayInterface $holiday
+     *
+     * Add a custom holiday
+     */
+    public function addHoliday(HolidayInterface $holiday): void;
 }

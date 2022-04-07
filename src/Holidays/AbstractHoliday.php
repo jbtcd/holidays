@@ -9,16 +9,16 @@ declare(strict_types = 1);
  * file that was distributed with this source code.
  */
 
-namespace jbtcd\Holidays\Helper;
+namespace jbtcd\Holidays\Holidays;
 
 use DateTime;
 
 /**
- * Class AbstractHelper
+ * Class AbstractHoliday
  *
  * @author Jonah Böther <mail@jbtcd.me>
  */
-abstract class AbstractHelper implements HelperInterface
+abstract class AbstractHoliday implements HolidayInterface
 {
     /**
      * @param DateTime $dateTime
