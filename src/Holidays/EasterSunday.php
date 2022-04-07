@@ -27,6 +27,8 @@ class EasterSunday extends AbstractHoliday
      *
      * @throws \Exception
      *
+     * @SuppressWarnings(PHPMD.ShortVariable)
+     *
      */
     public function getDateOfHoliday(DateTime $dateTime): DateTime
     {

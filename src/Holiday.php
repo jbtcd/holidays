@@ -23,19 +23,22 @@ use jbtcd\Holidays\Country\AbstractCountry;
  */
 class Holiday
 {
+    /** @var Configuration */
+    private Configuration $configuration;
+
     /** @var AbstractCountry */
     private AbstractCountry $country;
 
     /**
      * @param string $iso3
      */
-    public function __construct(string $iso3, ?string $region = null)
+    public function __construct(string $iso3)
     {
-        $config = new Configuration();
+        $this->configuration = new Configuration();
 
-        $this->country = $config->getCountryClass($iso3);
+        $this->country = $this->configuration->getCountryClass($iso3);
 
-        $this->country->registerHelper($region);
+        $this->country->registerHelper();
     }
 
     /**
@@ -71,13 +74,13 @@ class Holiday
      *
      * @return bool
      */
-    public static function isCountrySupported(string $iso3): bool
+    public function isCountrySupported(string $iso3): bool
     {
-        return Configuration::isCountrySupported($iso3);
+        return $this->configuration->isCountrySupported($iso3);
     }
 
-    public static function getSupportedCountries(): array
+    public function getSupportedCountries(): array
     {
-        return Configuration::$countries;
+        return $this->configuration->countries;
     }
 }

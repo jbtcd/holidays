@@ -8,9 +8,9 @@ A simple PHP library to work with all the holidays in the world.
 [![GitHub issues](https://img.shields.io/github/issues/jbtcd/holidays.svg)](https://github.com/jbtcd/holidays/issues)
 [![Build Status](https://travis-ci.com/jbtcd/holidays.svg?branch=main)](https://travis-ci.com/jbtcd/holidays)
 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
-[![packagist](https://img.shields.io/packagist/v/jbtcd/holidays.svg?style=flat-square)](https://packagist.org/packages/jbtcd/fitbit)
-[![downloads](https://img.shields.io/packagist/dt/jbtcd/holidays.svg?style=flat-square)](https://packagist.org/packages/jbtcd/fitbit)
-[![php version](https://img.shields.io/packagist/php-v/jbtcd/holidays?style=flat-square)](https://packagist.org/packages/jbtcd/fitbit)
+[![packagist](https://img.shields.io/packagist/v/jbtcd/holidays.svg?style=flat-square)](https://packagist.org/packages/jbtcd/holidays)
+[![downloads](https://img.shields.io/packagist/dt/jbtcd/holidays.svg?style=flat-square)](https://packagist.org/packages/jbtcd/holidays)
+[![php version](https://img.shields.io/packagist/php-v/jbtcd/holidays?style=flat-square)](https://packagist.org/packages/jbtcd/holidays)
 
 ## Installation
 
@@ -30,10 +30,6 @@ require __DIR__ . '/vendor/autoload.php';
 $holiday = new \jbtcd\Holidays\Holiday('DEU');
 
 var_dump($holiday->isHoliday(new \DateTime('start of year')));
-
-$datePeriod = new DatePeriod(new \DateTime('start of week'), 'P1D' , 'end of week')
-
-var_dump($holiday->getHolidays($datePeriod));
 ```
 
 ## Testing
