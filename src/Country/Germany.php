@@ -35,14 +35,14 @@ class Germany extends AbstractCountry
      */
     public function registerHelper(): void
     {
-        $this->helper[] = new NewYearsDay();
-        $this->helper[] = new GoodFriday();
-        $this->helper[] = new EasterMonday();
-        $this->helper[] = new LabourDay();
-        $this->helper[] = new AscensionDay();
-        $this->helper[] = new WhitMonday();
-        $this->helper[] = new GermanUnityDay();
-        $this->helper[] = new ChristmasDay();
-        $this->helper[] = new BoxingDay();
+        $this->holidays[] = new NewYearsDay();
+        $this->holidays[] = new GoodFriday();
+        $this->holidays[] = new EasterMonday();
+        $this->holidays[] = new LabourDay();
+        $this->holidays[] = new AscensionDay();
+        $this->holidays[] = new WhitMonday();
+        $this->holidays[] = new GermanUnityDay();
+        $this->holidays[] = new ChristmasDay();
+        $this->holidays[] = new BoxingDay();
     }
 }

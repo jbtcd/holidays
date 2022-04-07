@@ -30,10 +30,6 @@ require __DIR__ . '/vendor/autoload.php';
 $holiday = new \jbtcd\Holidays\Holiday('DEU');
 
 var_dump($holiday->isHoliday(new \DateTime('start of year')));
-
-$datePeriod = new DatePeriod(new \DateTime('start of week'), 'P1D' , 'end of week')
-
-var_dump($holiday->getHolidays($datePeriod));
 ```
 
 ## Testing

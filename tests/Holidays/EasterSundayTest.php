@@ -22,7 +22,7 @@ use PHPUnit\Framework\TestCase;
  */
 class EasterSundayTest extends TestCase
 {
-    protected function easterSundayDataProvider(): array
+    public function easterSundayDataProvider(): array
     {
         return [
             '2020' => [

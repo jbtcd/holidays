@@ -21,21 +21,26 @@ use jbtcd\Holidays\Holidays\HolidayInterface;
  */
 abstract class AbstractCountry implements Country
 {
-    /** @var HolidayInterface[] $helper */
-    protected array $helper;
+    /** @var HolidayInterface[] $holidays */
+    protected array $holidays;
 
     /**
      * In this function all countries has to register the Helper to get the dates of holidays
      */
     abstract public function registerHelper(): void;
 
+    public function addHoliday(HolidayInterface $holiday): void
+    {
+        $this->holidays[] = $holiday;
+    }
+
     /**
      * @inheritDoc
      */
     public function isHoliday(DateTime $dateTime): bool
     {
-        foreach ($this->helper as $helper) {
-            if ($helper->isMatch($dateTime)) {
+        foreach ($this->holidays as $holiday) {
+            if ($holiday->isMatch($dateTime)) {
                 return true;
             }
         }
